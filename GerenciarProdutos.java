@@ -19,14 +19,14 @@ public class GerenciarProdutos {
 
     public boolean remover(int codigo) {
         for (int i = 0; i < produto.size(); i++) {
+  
             if (produto.get(i).getCodigo() == codigo) {
-                produto.remove(codigo);
-                return true;    
+                System.out.println("Produto removido com sucesso " +produto.remove(i));
+                return true;
             }
-        
         }
+        System.out.println("Produto não removido");
         return false;
-
     }
 
     public Produto buscarPorCodigo(int codigo) {
