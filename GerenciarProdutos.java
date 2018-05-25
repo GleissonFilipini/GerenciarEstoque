@@ -115,7 +115,7 @@ public class GerenciarProdutos {
             if (produto.get(i) instanceof Perecivel) {
                 Perecivel per = (Perecivel) produto.get(i);
                 if (per.getValidade() == validade) {
-                    resultado += produto.get(i).Imprimir();
+                    resultado += produto.get(i).Imprimir() + "\n";
                 }
             }
         }
