@@ -32,7 +32,8 @@ public class GerenciarEstoque {
             System.out.println("10- Listar por Data de Validade");
             System.out.println("11- Vender produto");
             System.out.println("12- Comprar produto");
-            System.out.println("13- ******** SAIR ************");
+            System.out.println("13- Listar tudo");
+            System.out.println("14- ******** SAIR ************");
 
             opcao = e.nextInt();
 
@@ -228,11 +229,20 @@ public class GerenciarEstoque {
                     System.out.println(ge.comprarProduto(Codigo2, QuantidadeComprada));
                     break;
                 case 13:
-                    System.out.println("Saindo do programa");
+                    
+                    //Listar tudo
+                    System.out.println("Todos os programas");
+                    
+                    System.out.println(ge.listarTudo());
+                    break;
+                case 14:
+                    
+                    //saindo do programa
+                    System.out.println("saindo do programa");
                     break;
             }
 
-        } while (opcao != 13);
+        } while (opcao != 14);
 
     }
 
