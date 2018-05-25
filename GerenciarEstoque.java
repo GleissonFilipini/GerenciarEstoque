@@ -89,8 +89,13 @@ public class GerenciarEstoque {
                                 System.out.println("Qual o valor unitário?");
                                 double valorPerecivel = e.nextDouble();
 
+                                e.nextLine();
                                 System.out.println("Produto é refrigerado?");
-                                boolean refrigeradoPerecivel = e.nextBoolean();
+                                boolean sim=true;
+                                boolean nao=false;
+                                String refrigeradoPerecivel = e.nextLine();
+                                refrigerado = Boolean.parseBoolean(refrigeradoPerecivel);
+                                
                                 e.nextLine();
                                 System.out.println("Qual a data de validade?");
                                 String validadePerecivel = e.nextLine();
@@ -99,7 +104,7 @@ public class GerenciarEstoque {
 
                                 validade = LocalDate.parse(validadePerecivel, formatter);
 
-                                Perecivel per = new Perecivel(validade, refrigeradoPerecivel, codigoPerecivel, nomePerecivel, fabricantePerecivel, quantidadePerecivel, valorPerecivel);
+                                Perecivel per = new Perecivel(validade, refrigerado, codigoPerecivel, nomePerecivel, fabricantePerecivel, quantidadePerecivel, valorPerecivel);
                                 ge.adicionar(per);
                                 break;
                             case 3:
