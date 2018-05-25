@@ -94,7 +94,7 @@ public class GerenciarEstoque {
                                 boolean sim=true;
                                 boolean nao=false;
                                 String refrigeradoPerecivel = e.nextLine();
-                                refrigerado = Boolean.parseBoolean(refrigeradoPerecivel);
+                                boolean refrigerado = Boolean.parseBoolean(refrigeradoPerecivel);
                                 
                                 e.nextLine();
                                 System.out.println("Qual a data de validade?");
