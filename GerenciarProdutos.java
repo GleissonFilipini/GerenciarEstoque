@@ -134,14 +134,13 @@ public class GerenciarProdutos {
     }
 
     public boolean comprarProduto(int codigo, int quantidade) {
-        int quantidadecomprada;
         for (int i = 0; i < produto.size(); i++) {
             if (produto.get(i).getCodigo() == codigo) {
                 System.out.println("quantidade comprada: " + quantidade);
 
                 produto.get(i).comprar(quantidade);
 
-                quantidadecomprada = produto.get(i).getQuantidade();
+                int quantidadecomprada = produto.get(i).getQuantidade();
 
                 return true;
             }
