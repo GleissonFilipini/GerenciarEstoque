@@ -15,9 +15,7 @@ public class GerenciarEstoque {
         //VARIÁVEIS TEMPORÁRIAS
         int opcao;
         int opcao2;
-    
         String material;
-  
         LocalDate validade;
 
         do {
@@ -58,71 +56,71 @@ public class GerenciarEstoque {
                                 int codigoEletronico = e.nextInt();
                                 e.nextLine();
                                 System.out.println("Qual o nome do produto?");
-                                String nome = e.nextLine();
+                                String nomeEletronico = e.nextLine();
                                 System.out.println("Qual o fabricante?");
-                                String fabricante = e.nextLine();
+                                String fabricanteEletronico = e.nextLine();
                                 System.out.println("Qual a quantidade?");
-                                int quantidade = e.nextInt();
+                                int quantidadeEletronico = e.nextInt();
                                 System.out.println("Qual o valor unitário?");
-                                double valor = e.nextDouble();
+                                double valorEletronico = e.nextDouble();
 
                                 System.out.println("Digite a voltagem do produto");
-                                int voltagem = e.nextInt();
+                                int voltagemEletronico = e.nextInt();
                                 System.out.println("Qual a potencia do produto");
-                                int potencia = e.nextInt();
+                                int potenciaEletronico = e.nextInt();
                                 e.nextLine();
                                 System.out.println("Qual a eficiencia do produto?");
-                                String eficiencia = e.nextLine();
+                                String eficienciaEletronico = e.nextLine();
 
-                                Eletronico ele = new Eletronico(voltagem, potencia, eficiencia, codigoEletronico, nome, fabricante, quantidade, valor);
+                                Eletronico ele = new Eletronico(voltagemEletronico, potenciaEletronico, eficienciaEletronico, codigoEletronico, nomeEletronico, fabricanteEletronico, quantidadeEletronico, valorEletronico);
                                 ge.adicionar(ele);
                                 break;
                             case 2:
                                 System.out.println("Produto Perecivel");
                                 System.out.println("Qual o código do produto?");
-                                int codigo = e.nextInt();
+                                int codigoPerecivel = e.nextInt();
                                 e.nextLine();
                                 System.out.println("Qual o nome do produto?");
-                                String nome = e.nextLine();
+                                String nomePerecivel = e.nextLine();
                                 System.out.println("Qual o fabricante?");
-                                String fabricante = e.nextLine();
+                                String fabricantePerecivel = e.nextLine();
                                 System.out.println("Qual a quantidade?");
-                                int quantidade = e.nextInt();
+                                int quantidadePerecivel = e.nextInt();
                                 System.out.println("Qual o valor unitário?");
-                                double valor = e.nextDouble();
+                                double valorPerecivel = e.nextDouble();
 
                                 System.out.println("Produto é refrigerado?");
-                                boolean refrigerado = e.nextBoolean();
+                                boolean refrigeradoPerecivel = e.nextBoolean();
                                 e.nextLine();
                                 System.out.println("Qual a data de validade?");
-                                String validade2 = e.nextLine();
+                                String validadePerecivel = e.nextLine();
 
                                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
                                 validade = LocalDate.parse(validade2, formatter);
 
-                                Perecivel per = new Perecivel(validade, refrigerado, codigo, nome, fabricante, quantidade, valor);
+                                Perecivel per = new Perecivel(validadePerecivel, refrigeradoPerecivel, codigoPerecivel, nomePerecivel, fabricantePerecivel, quantidadePerecivel, valorPerecivel);
                                 ge.adicionar(per);
                                 break;
                             case 3:
                                 System.out.println("Produto Movel");
                                 System.out.println("Qual o código do produto?");
-                                int codigo = e.nextInt();
+                                int codigoMovel = e.nextInt();
                                 e.nextLine();
                                 System.out.println("Qual o nome do produto?");
-                                String nome = e.nextLine();
+                                String nomeMovel = e.nextLine();
                                 System.out.println("Qual o fabricante?");
-                                String fabricante = e.nextLine();
+                                String fabricanteMovel = e.nextLine();
                                 System.out.println("Qual a quantidade?");
-                                int quantidade = e.nextInt();
+                                int quantidadeMovel = e.nextInt();
                                 System.out.println("Qual o valor unitário?");
-                                double valor = e.nextDouble();
+                                double valorMovel = e.nextDouble();
 
                                 e.nextLine();
                                 System.out.println("Qual o tipo do material?");
-                                String material = e.nextLine();
+                                String materialMovel = e.nextLine();
 
-                                Movel mo = new Movel(material, codigo, nome, fabricante, quantidade, valor);
+                                Movel mo = new Movel(materialMovel, codigoMovel, nomeMovel, fabricanteMovel, quantidadeMovel, valorMovel);
                                 ge.adicionar(mo);
                                 break;
                         }
