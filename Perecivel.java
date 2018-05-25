@@ -20,11 +20,6 @@ public class Perecivel extends Produto{
     }
    
     public void setRefrigerado(boolean refrigerado) {
-        boolean sim = true;
-        boolean nao = false;
-        if(refrigerado == sim && refrigerado == nao){
-        this.refrigerado = refrigerado;
-        }
     }
 
     public Perecivel(LocalDate validade, boolean refrigerado, int codigo, String nome, String fabricante, int quantidade, double valorUnitario) {
