@@ -97,9 +97,9 @@ public class GerenciarEstoque {
 
                                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-                                validade = LocalDate.parse(validade2, formatter);
+                                validade = LocalDate.parse(validadePerecivel, formatter);
 
-                                Perecivel per = new Perecivel(validadePerecivel, refrigeradoPerecivel, codigoPerecivel, nomePerecivel, fabricantePerecivel, quantidadePerecivel, valorPerecivel);
+                                Perecivel per = new Perecivel(validade, refrigeradoPerecivel, codigoPerecivel, nomePerecivel, fabricantePerecivel, quantidadePerecivel, valorPerecivel);
                                 ge.adicionar(per);
                                 break;
                             case 3:
