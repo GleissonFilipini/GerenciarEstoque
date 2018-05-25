@@ -203,8 +203,8 @@ public class GerenciarEstoque {
                     e.nextLine();
                     System.out.println("Digite a data de validade");
                     String datavalidade = e.nextLine();
-                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-                    LocalDate validade2 = LocalDate.parse(datavalidade, formatter);
+                    DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+                    LocalDate validade2 = LocalDate.parse(datavalidade, formatter2);
 
                     System.out.println(ge.listarPorValidade(validade2));
 
