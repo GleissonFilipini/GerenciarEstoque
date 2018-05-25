@@ -12,14 +12,12 @@ public class GerenciarEstoque {
 
         GerenciarProdutos ge = new GerenciarProdutos();
 
+        //VARIÁVEIS TEMPORÁRIAS
         int opcao;
         int opcao2;
-        int codigo, voltagem, potencia;
-        String nome;
-        String fabricante, eficiencia, material;
-        int quantidade;
-        double valor;
-        boolean refrigerado;
+    
+        String material;
+  
         LocalDate validade;
 
         do {
@@ -57,44 +55,44 @@ public class GerenciarEstoque {
                             case 1:
                                 System.out.println("Produto Eletronico");
                                 System.out.println("Qual o código do produto?");
-                                codigo = e.nextInt();
+                                int codigoEletronico = e.nextInt();
                                 e.nextLine();
                                 System.out.println("Qual o nome do produto?");
-                                nome = e.nextLine();
+                                String nome = e.nextLine();
                                 System.out.println("Qual o fabricante?");
-                                fabricante = e.nextLine();
+                                String fabricante = e.nextLine();
                                 System.out.println("Qual a quantidade?");
-                                quantidade = e.nextInt();
+                                int quantidade = e.nextInt();
                                 System.out.println("Qual o valor unitário?");
-                                valor = e.nextDouble();
+                                double valor = e.nextDouble();
 
                                 System.out.println("Digite a voltagem do produto");
-                                voltagem = e.nextInt();
+                                int voltagem = e.nextInt();
                                 System.out.println("Qual a potencia do produto");
-                                potencia = e.nextInt();
+                                int potencia = e.nextInt();
                                 e.nextLine();
                                 System.out.println("Qual a eficiencia do produto?");
-                                eficiencia = e.nextLine();
+                                String eficiencia = e.nextLine();
 
-                                Eletronico ele = new Eletronico(voltagem, potencia, eficiencia, codigo, nome, fabricante, quantidade, valor);
+                                Eletronico ele = new Eletronico(voltagem, potencia, eficiencia, codigoEletronico, nome, fabricante, quantidade, valor);
                                 ge.adicionar(ele);
                                 break;
                             case 2:
                                 System.out.println("Produto Perecivel");
                                 System.out.println("Qual o código do produto?");
-                                codigo = e.nextInt();
+                                int codigo = e.nextInt();
                                 e.nextLine();
                                 System.out.println("Qual o nome do produto?");
-                                nome = e.nextLine();
+                                String nome = e.nextLine();
                                 System.out.println("Qual o fabricante?");
-                                fabricante = e.nextLine();
+                                String fabricante = e.nextLine();
                                 System.out.println("Qual a quantidade?");
-                                quantidade = e.nextInt();
+                                int quantidade = e.nextInt();
                                 System.out.println("Qual o valor unitário?");
-                                valor = e.nextDouble();
+                                double valor = e.nextDouble();
 
                                 System.out.println("Produto é refrigerado?");
-                                refrigerado = e.nextBoolean();
+                                boolean refrigerado = e.nextBoolean();
                                 e.nextLine();
                                 System.out.println("Qual a data de validade?");
                                 String validade2 = e.nextLine();
@@ -109,20 +107,20 @@ public class GerenciarEstoque {
                             case 3:
                                 System.out.println("Produto Movel");
                                 System.out.println("Qual o código do produto?");
-                                codigo = e.nextInt();
+                                int codigo = e.nextInt();
                                 e.nextLine();
                                 System.out.println("Qual o nome do produto?");
-                                nome = e.nextLine();
+                                String nome = e.nextLine();
                                 System.out.println("Qual o fabricante?");
-                                fabricante = e.nextLine();
+                                String fabricante = e.nextLine();
                                 System.out.println("Qual a quantidade?");
-                                quantidade = e.nextInt();
+                                int quantidade = e.nextInt();
                                 System.out.println("Qual o valor unitário?");
-                                valor = e.nextDouble();
+                                double valor = e.nextDouble();
 
                                 e.nextLine();
                                 System.out.println("Qual o tipo do material?");
-                                material = e.nextLine();
+                                String material = e.nextLine();
 
                                 Movel mo = new Movel(material, codigo, nome, fabricante, quantidade, valor);
                                 ge.adicionar(mo);
