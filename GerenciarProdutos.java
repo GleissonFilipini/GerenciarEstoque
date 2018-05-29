@@ -151,7 +151,9 @@ public class GerenciarProdutos {
     public String listarTudo() {
         String resultado = "";
         for (int i = 0; i < produto.size(); i++) {
+            if(produto.get(i) instanceof Produto){
             resultado += produto.get(i).Imprimir();
+            }     
         }
         return resultado;
     }
